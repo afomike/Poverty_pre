@@ -15,7 +15,7 @@ app = Flask(__name__)
 #     label_encoders = pickle.load(encoder_file)
 
 #  Load the pre-trained model and encoders
-model = joblib.load('models/models.pkl')
+models = joblib.load('models/models.pkl')
 label_encoders = joblib.load('models/label_encoders.pkl')
 scaler = joblib.load('models/scaler.pkl')
 
