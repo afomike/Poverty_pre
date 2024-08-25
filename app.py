@@ -6,20 +6,10 @@ import joblib
 
 app = Flask(__name__)
 
-# # Load models and scalers
-# with open('models/models.pkl', 'rb') as model_file:
-#     models = pickle.load(model_file)
-# with open('models/scaler.pkl', 'rb') as scaler_file:
-#     scaler = pickle.load(scaler_file)
-# with open('models/label_encoders.pkl', 'rb') as encoder_file:
-#     label_encoders = pickle.load(encoder_file)
-
 #  Load the pre-trained model and encoders
 models = joblib.load('models/models.pkl')
 label_encoders = joblib.load('models/label_encoders.pkl')
 scaler = joblib.load('models/scaler.pkl')
-
-
 
 
 def poverty_level(income):
